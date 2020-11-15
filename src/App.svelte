@@ -1,12 +1,19 @@
 <script>
+  import Router from "svelte-spa-router";
+  import routes from "./routes";
   import Navbar from "./components/Navbar.svelte";
   import Landing from "./components/Landing.svelte";
-  const navItems = [{ text: "HOME" }, { text: "PORTFOLIO" }, { text: "ABOUT" }];
+  const navItems = [
+    { text: "HOME", urlPath: "#/" },
+    { text: "PORTFOLIO", urlPath: "#/portfolio" },
+    { text: "ABOUT", urlPath: "#/about" },
+  ];
 </script>
 
 <style>
   main {
     min-height: 100%;
+    height: 100%;
     /* padding for mobile nav */
     padding: 0 0 60px 0;
   }
@@ -21,5 +28,6 @@
 
 <main>
   <Navbar {navItems} />
-  <Landing />
+  <!-- <Landing /> -->
+  <Router {routes} />
 </main>

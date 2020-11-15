@@ -5,13 +5,13 @@
 
 <style>
   nav {
-    border: 1px solid salmon;
     width: 100%;
     position: fixed;
     left: 0;
     bottom: 0;
     display: flex;
     align-items: space-evenly;
+    padding: 10px 15px;
   }
   .menu {
     width: 40px;
@@ -27,19 +27,16 @@
   }
 
   .nav-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 12px;
     margin: 0 10px;
-    background-color: #00000010;
   }
 </style>
 
 <nav role="navigation">
   <span class="flex-spacer" />
   {#each navItems as item}
-    <div class="nav-item">{item.text}</div>
+    <a href={item.urlPath}>
+      <div class="nav-item btn">{item.text}</div>
+    </a>
   {/each}
   <span class="flex-spacer" />
 

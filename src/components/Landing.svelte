@@ -1,7 +1,11 @@
 <style>
   header {
     padding: 1em;
-    text-align: center;
+    height: calc(100% - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   h1 {
@@ -14,5 +18,5 @@
 
 <header>
   <h1>ALEX WARNES</h1>
-  <p>Intelligence Analyst turned Web Developer.</p>
+  <p>Intelligence Analyst turned Web Developer</p>
 </header>

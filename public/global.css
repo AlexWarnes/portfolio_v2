@@ -71,3 +71,23 @@ button:not(:disabled):active {
 button:focus {
   border-color: #666;
 }
+
+/* CUSTOM CLASS STYLES */
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  color: #fafafa;
+  background: #434343;
+  font-weight: 500;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  border: 2px solid #57c789;
+  box-shadow: 0 0 3px #57c789;
+  cursor: hover;
+}

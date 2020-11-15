@@ -5,13 +5,13 @@
 
 <style>
   nav {
-    border: 1px solid cyan;
     width: 100%;
     position: fixed;
     left: 0;
     top: 0;
     display: flex;
     align-items: center;
+    padding: 10px 15px;
   }
 
   .menu {
@@ -28,12 +28,7 @@
   }
 
   .nav-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 12px;
     margin: 0 10px;
-    background-color: #00000010;
   }
 </style>
 
@@ -41,6 +36,12 @@
   <div class="menu"><span>M</span></div>
   <span class="flex-spacer" />
   {#each navItems as item}
-    <div class="nav-item">{item.text}</div>
+    <a href={item.urlPath}>
+      <div class="nav-item btn">{item.text}</div>
+    </a>
   {/each}
 </nav>
+
+<!-- #5773c7 blue -->
+<!-- 57c789 green -->
+<!-- #d50000 red -->

@@ -10,20 +10,9 @@
     left: 0;
     bottom: 0;
     display: flex;
-    align-items: space-evenly;
+    justify-content: space-evenly;
     padding: 10px 15px;
-  }
-  .menu {
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .flex-spacer {
-    flex-grow: 1;
+    font-size: 0.8em;
   }
 
   .nav-item {
@@ -32,13 +21,9 @@
 </style>
 
 <nav role="navigation">
-  <span class="flex-spacer" />
   {#each navItems as item}
     <a href={item.urlPath}>
       <div class="nav-item btn">{item.text}</div>
     </a>
   {/each}
-  <span class="flex-spacer" />
-
-  <div class="menu"><span>M</span></div>
 </nav>

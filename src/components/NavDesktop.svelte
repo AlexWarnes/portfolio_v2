@@ -14,15 +14,6 @@
     padding: 10px 15px;
   }
 
-  .menu {
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   .flex-spacer {
     flex-grow: 1;
   }
@@ -33,7 +24,6 @@
 </style>
 
 <nav role="navigation">
-  <div class="menu"><span>M</span></div>
   <span class="flex-spacer" />
   {#each navItems as item}
     <a href={item.urlPath}>
@@ -41,7 +31,3 @@
     </a>
   {/each}
 </nav>
-
-<!-- #5773c7 blue -->
-<!-- 57c789 green -->
-<!-- #d50000 red -->

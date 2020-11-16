@@ -1,8 +1,8 @@
-import Landing from "./components/Landing.svelte";
+import Home from "./components/Home.svelte";
 import RouteNotFound from "./components/RouteNotFound.svelte"
 
 export default {
-  '/': Landing,
+  '/': Home,
   '/portfolio': RouteNotFound,
   '/about': RouteNotFound,
   '*': RouteNotFound,

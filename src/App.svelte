@@ -2,11 +2,10 @@
   import Router from "svelte-spa-router";
   import routes from "./routes";
   import Navbar from "./components/Navbar.svelte";
-  import Landing from "./components/Landing.svelte";
   const navItems = [
-    { text: "HOME", urlPath: "#/" },
-    { text: "PORTFOLIO", urlPath: "#/portfolio" },
-    { text: "ABOUT", urlPath: "#/about" },
+    { text: "home", urlPath: "#/" },
+    { text: "portfolio", urlPath: "#/portfolio" },
+    { text: "about", urlPath: "#/about" },
   ];
 </script>
 
@@ -28,6 +27,5 @@
 
 <main>
   <Navbar {navItems} />
-  <!-- <Landing /> -->
   <Router {routes} />
 </main>

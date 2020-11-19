@@ -2,11 +2,40 @@
   import Router from "svelte-spa-router";
   import routes from "./routes";
   import Navbar from "./components/Navbar.svelte";
+  import Star from "./components/Star.svelte";
   const navItems = [
     // { text: "home", urlPath: "#/" },
     { text: "projects", urlPath: "#/projects" },
     { text: "about", urlPath: "#/about" },
   ];
+
+  const vh = window.innerHeight - 4;
+  const vw = window.innerWidth - 4;
+  const starCount = Math.floor(Math.random() * 12);
+  console.log("starCount: ", { starCount, vh, vw });
+
+  let stars = Array(starCount)
+    .fill("x", 0)
+    .map((s) => {
+      const opacity = Math.random();
+      return {
+        x: Math.floor(Math.random() * vw),
+        y: Math.floor(Math.random() * vh),
+        opacity: opacity > 0.5 ? 0.5 : opacity,
+      };
+    });
+
+  console.log("Stars: ", stars);
+
+  const handleMouseMove = (e) => {
+    console.log("MOUSE MOVE", e.clientX);
+    stars = stars.map((s) => {
+      return {
+        ...s,
+        x: s.x++,
+      };
+    });
+  };
 </script>
 
 <style>
@@ -25,6 +54,9 @@
   }
 </style>
 
+{#each stars as star (star)}
+  <Star {star} />
+{/each}
 <main>
   <Navbar {navItems} />
   <Router {routes} />

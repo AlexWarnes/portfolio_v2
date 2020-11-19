@@ -3,8 +3,8 @@
   import routes from "./routes";
   import Navbar from "./components/Navbar.svelte";
   const navItems = [
-    { text: "home", urlPath: "#/" },
-    { text: "portfolio", urlPath: "#/portfolio" },
+    // { text: "home", urlPath: "#/" },
+    { text: "projects", urlPath: "#/projects" },
     { text: "about", urlPath: "#/about" },
   ];
 </script>

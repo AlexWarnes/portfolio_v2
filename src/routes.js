@@ -3,7 +3,7 @@ import RouteNotFound from "./components/RouteNotFound.svelte"
 
 export default {
   '/': Home,
-  '/portfolio': RouteNotFound,
+  '/projects': RouteNotFound,
   '/about': RouteNotFound,
   '*': RouteNotFound,
 }

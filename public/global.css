@@ -16,6 +16,11 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--background);
+  background: linear-gradient(
+    180deg,
+    rgba(37, 46, 66, 1) 0%,
+    rgba(55, 69, 98, 1) 100%
+  );
 }
 
 * {
@@ -25,8 +30,6 @@ body {
 body {
   color: var(--white);
   box-sizing: border-box;
-  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; */
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
 }
@@ -38,16 +41,16 @@ h4 {
   font-weight: 500;
 }
 
-a {
+a.link {
   color: rgb(0, 100, 200);
   text-decoration: none;
 }
 
-a:hover {
+a.link:hover {
   text-decoration: underline;
 }
 
-a:visited {
+a.link:visited {
   color: rgb(0, 80, 160);
 }
 
@@ -83,23 +86,4 @@ button:disabled {
 
 button:focus {
   border-color: #666;
-}
-
-/* CUSTOM CLASS STYLES */
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5em 1em;
-  border-radius: 2px;
-  color: var(--white);
-  background-color: transparent;
-  border: 2px solid transparent;
-  transition: all 0.2s ease;
-}
-
-.btn:hover {
-  border: 2px solid var(--blue-2);
-  box-shadow: 0 0 3px var(--blue-2);
-  cursor: pointer;
 }

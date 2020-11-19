@@ -1,3 +1,7 @@
+<script>
+  import LinkButton from "./LinkButton.svelte";
+</script>
+
 <style>
   header {
     padding: 1em;
@@ -14,12 +18,6 @@
     font-weight: 500;
     margin: 0;
   }
-
-  .btn,
-  button {
-    background-color: var(--red);
-    font-weight: 400;
-  }
 </style>
 
 <header>
@@ -28,5 +26,6 @@
     <h1>WARNES</h1>
     <p>Intelligence Analyst turned Web Developer</p>
   </div>
-  <a href="#/about" class="btn">Learn More</a>
+
+  <LinkButton urlPath="#/about" color="red"><span>Learn More</span></LinkButton>
 </header>
